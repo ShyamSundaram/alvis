@@ -88,7 +88,7 @@ body{
 }
 
 .navbar :hover{
-  background-color: rgba(139, 83, 139, 0.678);
+  background-color: rgba(172, 80, 233, 0.705);
   color: rgb(255, 241, 241);
   transition: transform .10s;
   transform: scale(1.1);
@@ -252,34 +252,34 @@ body{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-            .tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-            border-radius: 0px;
-            }
+.tab {
+overflow: hidden;
+border: 1px solid #ccc;
+background-color: #f1f1f1;
+border-radius: 0px;
+}
 
-            /* Style the buttons inside the tab */
-            .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-            }
+/* Style the buttons inside the tab */
+.tab button {
+background-color: inherit;
+float: left;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 14px 16px;
+transition: 0.3s;
+font-size: 17px;
+}
 
-            /* Change background color of buttons on hover */
-            .tab button:hover {
-            background-color: #ddd;
-            }
+/* Change background color of buttons on hover */
+.tab button:hover {
+background-color: #ddd;
+}
 
-            /* Create an active/current tablink class */
-            .tab button.active {
-            background-color: #ccc;
-            }
+/* Create an active/current tablink class */
+.tab button.active {
+background-color: #ccc;
+}
 
 .tab {
            overflow: hidden;
@@ -289,32 +289,33 @@ body{
            }
 
            /* Style the buttons inside the tab */
-           .tab button {
-           background-color: inherit;
-           float: left;
-           border: none;
-           outline: none;
-           cursor: pointer;
-           padding: 14px 16px;
-           transition: 0.3s;
-           font-size: 17px;
-           }
+.tab button {
+background-color: inherit;
+float: left;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 14px 16px;
+transition: 0.3s;
+font-size: 17px;
+}
 
-           /* Change background color of buttons on hover */
-           .tab button:hover {
-           background-color: #ddd;
-           }
+/* Change background color of buttons on hover */
+.tab button:hover {
+background-color: #ddd;
+}
 
-           /* Create an active/current tablink class */
-           .tab button.active {
-           background-color: #ccc;
-           }
+/* Create an active/current tablink class */
+.tab button.active {
+background-color: #ccc;
+}
 
-           .ui-slider .ui-slider-handle {
-            height: 15px;
-            width: 5px;
-            padding-left: 5px;
-            }
+.ui-slider .ui-slider-handle {
+height: 15px;
+width: 5px;
+padding-left: 5px;
+}
+
 /* FOOTER */
 .footer {
   width: 100%;

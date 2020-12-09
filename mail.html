@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+        <link href="index_loading.css" rel="stylesheet" />
+    <title>Feedback</title>
+</head>
+
+<body>
+    <div class="w3-center">
+    <header class="w3-container w3-theme w3-padding" id="myHeader">
+    <h1 class="w3-xxxlarge w3-animate-bottom" style="text-align: center;">Alvis</h1>
+     </header>
+     </div>   
+                        <img scr="pics/fb.jpg" style="height: 20px;width: 100%" />
+
+    <h2 style="margin-left: 500px;" class="content-head is-center">Contact Us!</h2>
+    <aside style="margin-left: 500px;">
+        <p>
+            We would <em>love</em> to hear from you!
+        </p>
+        <p>
+            Please use the <b><em>Contact Form</em></b>
+            to send us a message.
+        </p>
+    </aside>
+
+   
+
+
+    <form style="margin-left: 500px;"id="gform" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
+          action="https://script.google.com/macros/s/AKfycbyBi1eA0nznPFB5vYs5zkSqTbmH4j6tFPErI2MS/exec">
+
+
+        <BR>
+
+        <label for="name">Name: </label>
+        <input id="name" name="name" placeholder="Optional" />
+
+        <br>
+        <br>
+
+        <label for="message">Message: </label>
+        <textarea id="message" name="message" rows="10" placeholder="Tell us what's on your mind..."></textarea>
+
+         <br>
+        <br>
+
+        <label for="email"><em>Your</em> Email Address:</label>
+        <input id="email" name="email" type="email" value=""
+               required placeholder="johndoe@email.com" />
+
+
+
+        <button class="button-success pure-button button-xlarge">
+            <i class="fa fa-paper-plane"></i>&nbsp;Send
+        </button>
+
+    </form>
+    <br/>
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <div style="display:none;" id="thankyou_message">
+        <h2>
+            <em>Thanks</em> for contacting us!
+            We will get back to you soon!
+        </h2>
+    </div><br/>
+    <img scr="pics/fb.jpg" style="height: 20px;width: 100%" />
+    <br/><br/>
+    <h4>You may write to us directly to algovis1@gmail.com</h4>
+    <script data-cfasync="false" type="text/javascript"
+            src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+
+
+</body>
+</html>
+
+

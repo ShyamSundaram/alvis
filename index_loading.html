@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Alvis Sort and search</title>
 
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -40,13 +40,13 @@
     });
 </script>
 <body>
-    <div class="banner">Algorithmic Visualizer</div>
+    <div class="banner">Alvis</div>
     <div class="navbar">
 <!--     <a href ="javascript:binarySearch()"></a> -->
     <a></a>
     <a href ="javascript:custom()">Custom Input</a>
     
-    <a href="javascript:selectionSort()" >Selection sort </a>
+    <a href="javascript:selectionSort()" >Selection Sort </a>
     <a href="javascript:appender_bubbleSort()">Bubble Sort</a>
     <a href ="javascript:insertionSort()">Insertion Sort</a>
     
@@ -70,18 +70,18 @@
     <img id="start" src="pics/start.gif" style="margin-left: 14%;" />
     <section class="data-container1" style="margin-bottom: 0px;"></section>
     <div id="legend" style="display: none">
-    <div class="block2" style="height: 20px;float: left;margin-bottom: 300px;transform: translateX(5px);">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="1">Unsorted&nbsp;Array</b></div>
-    <div class="block2" style="height: 20px;background-color: #FF4949;float: left;margin-bottom: 260px;transform: translateX(5px);">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="2">Compared&nbsp;Elements</b></div>
-    <div class="block2" style="height: 20px;float: left;margin-bottom: 220px;transform: translateX(5px);background-color: #13CE66">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="3">Sorted&nbsp;Elements</b></div>
-</div>
+        <div class="block2" style="height: 20px;float: left;margin-bottom: 300px;transform: translateX(5px);">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="1">Unsorted&nbsp;Array</b></div>
+        <div class="block2" style="height: 20px;background-color: #FF4949;float: left;margin-bottom: 260px;transform: translateX(5px);">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="2">Compared&nbsp;Elements</b></div>
+        <div class="block2" style="height: 20px;float: left;margin-bottom: 220px;transform: translateX(5px);background-color: #13CE66">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="3">Sorted&nbsp;Elements</b></div>
+    </div>
     <div id="Demo" style="margin-right: 50px;margin-top: 30px;margin-bottom: 0px;">
     	<h2 id="psu" style="margin-top: 17px;margin-right: 80px;display: none">Pseudocode</h2>
     </div>
     <div id="Bale_loadz" style="display: none;height: 1px;width: 1px;">
-    <img src="pics/loading1.gif" style="height: 50%;width: 50%;" />
+    <img src="pics/start.gif" style="height: 50%;width: 50%;" />
     </div>
     <div class="data-container" style="margin-top: 200px;margin-left: 230px;"></div>
         <br/><br/><br/><br/><br/><br/>
@@ -91,9 +91,9 @@
     	    <div id="exp" style="margin-left: 30%;display: none">Welcome!</div>
     	    <br/><br/>
 <div id="control" style="display: none">
-    <img src="pics/Right9.png" style="height: 3%;width: 3%;margin-left: 430px;" onclick="javascript:stepbackward();" />
-    <img id="c" src="pics/Play.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="(q==0)? document.getElementById('c').src='pause.png': document.getElementById('c').src='play.png';q=!q;;javascript:control(q);"/>
-    <img src="pics/Right3.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="javascript:stepforward();"/>
+    <img src="pics/blackleft.png" style="height: 3%;width: 3%;margin-left: 430px;" onclick="javascript:stepbackward();" />
+    <img id="c" src="pics/blackplay.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="(q==0)? document.getElementById('c').src='pics/pause.png': document.getElementById('c').src='pics/blackplay.png';q=!q;;javascript:control(q);"/>
+    <img src="pics/blackright.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="javascript:stepforward();"/>
 </div>
 
 <br/><br/><br/><br/>
@@ -695,7 +695,7 @@ int main(void)
 </script>
 
 <!-- <script src="test_index_loading.js"></script> -->
-<script src="lal.js"></script>
+<script src="sort.js"></script>
 </html>
 
 
