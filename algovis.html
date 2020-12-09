@@ -1,0 +1,243 @@
+<html>
+<title>Algorithm Visualizer</title>
+<meta charset="UTF-8">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="index.css">
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="index_loading.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<body style="background-color: white;">
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+  <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
+  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+</nav>
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <a href="mail.html" class="fa fa-bars w3-xlarge w3-button w3-theme"></a> 
+  <div class="w3-center">
+  <h4 style="font-size:100px;">Alvis</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">Ace Data Structures and Algorithms</h1>
+    <div class="w3-padding-32">
+<!--       <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">TEAM MEMBERS</button>
+ -->    </div>
+  </div>
+</header>
+<!-- <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">x</span>
+        <h4>Developed By</h4>
+        <h5>A Akash</h5>
+        <h5>Shyam Sundaram</h5>
+        <h5>Shyam Nair</h5>
+        <h5>S Vaibhave</h5>
+        <h5>Prof: Oswald C</h5>
+      </header>
+    </div>
+</div> -->
+
+
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third" style="float: left;">
+  <div class="w3-card w3-container" style="min-height:260px;background-color: white">
+  <h3>Sorting and Searching</h3><br>
+  <a href="index_loading.html" target="_blank"><img src="pics/sorting.png" style="height: 150px;width: 300px;"></a>
+  </div>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<section class="data-container" style="margin-top: 150px;margin-left: 70px;"></section>
+
+<div class="w3-third" style="float: right;">
+  <div class="w3-card w3-container" style="margin-top: 0px;min-height:200px;background-color: white;">
+  <h3>Graphs</h3><br>
+  <a href="banner.html" target="_blank"><img src="pics/graph.png" style="height: 175px;width: 200px;"></a>
+  </div>
+</div>
+</div>
+
+<div class="w3-container">
+<hr>
+<!-- <div class="w3-center">
+  <h2>Concepts Used</h2>
+</div>
+
+<div class="w3-row">
+  <div class="w3-col w3-container m2 w3-red"><p>Data Structures</p></div>
+  <div class="w3-col w3-container m2 w3-blue"><p>Algorithms</p></div>
+  <div class="w3-col w3-container m2 w3-blue-grey"><p>Html</p></div>
+  <div class="w3-col w3-container m2 w3-teal"><p>Javascript</p></div>
+  <div class="w3-col w3-container m2 w3-yellow"><p>Css</p></div>
+  <div class="w3-col w3-container m2 w3-orange"><p>Bootstrap</p></div>
+</div> -->
+
+<!-- <hr>
+<div class="w3-center" style="background-color: black;">
+  <p class="w3-large" style="background-color: white;">“Education without application is just entertainment."— Tim Sanders</p>
+</div> -->
+<!-- <br> -->
+<!-- </div>
+ -->
+</body>
+<script>
+  //document.getElementById("error_dff048e0f74cf4577bde28ad546c51a62287c082").style.display='none';
+  const container = document.querySelector(".data-container");
+function swap(el1, el2) {
+  return new Promise(resolve => {
+    const style1 = window.getComputedStyle(el1);
+    const style2 = window.getComputedStyle(el2);
+
+    const transform1 = style1.getPropertyValue("transform");
+    const transform2 = style2.getPropertyValue("transform");
+
+    el1.style.transform = transform2;
+    el2.style.transform = transform1;
+   // document.getElementById("Demo").innerHTML="Swapping "+el1.childNodes[0].innerHTML+" and "+el2.childNodes[0].innerHTML;
+    // Wait for the transition to end!
+    window.requestAnimationFrame(function() {
+      setTimeout(() => {
+        container.insertBefore(el2, el1);
+        resolve();
+      }, 250);
+    });
+  });
+}
+async function quickbubbleSort(delay = 100) 
+{
+    let blocks = document.querySelectorAll(".block");
+
+  if (delay && typeof delay !== "number") {
+    alert("sort: First argument must be a typeof Number");
+    return;
+  }
+    for(let x=0;x<100;x+=1){
+  for (let i = 0; i < blocks.length - 1; i += 1) 
+  {
+    for (let j = 0; j < blocks.length - i - 1; j += 1) 
+    {  blocks[j].style.backgroundColor = "#58b7ff";
+      await new Promise(resolve =>setTimeout(() => {resolve();}, delay));
+      const value1 = Math.floor(Math.random() * 100);
+      const value2 = Math.floor(Math.random() * 100);
+      //blocks[j].style.backgroundColor = "#58b7ff";
+      if(value1%3==0){
+        blocks[j].style.backgroundColor="black";
+        blocks[j].style.height=`${value1}px`;
+      }
+      if (value1 > value2) 
+      {   blocks[j].style.backgroundColor = "#58b7ff";
+        await swap(blocks[j], blocks[j + 1]);
+        blocks = document.querySelectorAll(".block");
+      } 
+    }
+  }
+ }
+  await sleep(10);
+}
+function generateBlocks(num = 10) {
+  if (num && typeof num !== "number") {
+    alert("First argument must be a typeof Number");
+    return;
+  }
+  for (let i = 0; i < num; i += 1) {
+    const value = Math.floor(Math.random() * 100);
+
+    const block = document.createElement("div");
+    block.classList.add("block");
+    block.style.height = `${value}px`;
+    block.style.transform = `translateX(${i * 30}px)`;
+    block.style.backgroundColor = "black";
+    const blockLabel = document.createElement("label");
+    blockLabel.classList.add("block__id");
+  //  blockLabel.innerHTML = value;
+
+    block.appendChild(blockLabel);
+    container.appendChild(block);
+  }}
+  generateBlocks();
+
+  quickbubbleSort();
+</script>
+<footer style="margin-top: 0%;">
+<div class="footer" style="margin-top: 1%">
+  <div class="inner-footer">
+
+<!--  for company name and description -->
+    <div class="footer-items">
+      <h1>Feedback</h1>
+      <p>Making algorithms easy!</p>
+            <a href='https://www.symptoma.es/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/766601/t/11"></script>
+    </div>
+
+<!--  for quick links  -->
+    <div class="footer-items">
+      <h3>Quick Links</h3>
+      <div class="border1"></div> <!--for the underline -->
+        <ul>
+          <a href="algovis.html"><li>Home</li></a>
+          <a href="index_loading.html"><li>Sorting & Searching algorithms</li></a>
+          <a href="banner.html"><li>Graph algorithms</li></a>
+          <a href="mail.html"><li>Feedback</li></a>
+        </ul>
+    </div>
+      <!-- <div style="margin-left: 45%;margin-top: 0%">
+      <a href='https://www.symptoma.es/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/766601/t/11"></script>
+</div> -->
+<!--  for some other links -->
+<!--     <div class="footer-items">
+      <h3>Recipes</h3>
+      <div class="border1"></div>  for the underline -->
+<!--         <ul>
+          <a href="#"><li>Indian</li></a>
+          <a href="#"><li>Chinese</li></a>
+          <a href="#"><li>Mexican</li></a>
+          <a href="#"><li>Italian</li></a>
+        </ul> -->
+<!--     </div> --> -->
+
+<!--  for contact us info -->
+    <div class="footer-items">
+      <h3>Contact us</h3>
+      <div class="border1"></div>
+        <ul>
+          <!-- <li><i class="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc</li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i>123456789</li> -->
+          <li><i class="fa fa-envelope" aria-hidden="true"></i>algovis1@gmail.com</li>
+        </ul> 
+      
+<!--   for social links -->
+
+        <div >
+          &nbsp;&nbsp;<h3>Team  </h3>
+          Oswald C <a href="https://www.linkedin.com/in/oswald-c-bb5b37b7/?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
+          <br>Shyam Sundaram <a href="https://www.linkedin.com/in/shyam-sundaram-641735192"><i class="fab fa-linkedin"></i></a>
+           <br/>Shyam Nair <a href="https://www.linkedin.com/in/shyam-nair-189765201"><i class="fab fa-linkedin"></i></a>
+           <br>Akash Jain <a href="https://www.linkedin.com/in/akash-jain-78393418b"><i class="fab fa-linkedin"></i></a>
+           <br/>S Vaibhave Davey <a href="https://www.linkedin.com/in/s-vaibhave-davey-a8798118b/"><i class="fab fa-linkedin"></i></a>
+        </div> 
+    </div>
+  </div>
+  
+<!--   Footer Bottom start  -->
+  <div class="footer-bottom">
+    Copyright &copy; algovis 2020.
+  </div>
+</div>
+</footer>
+
+</html>

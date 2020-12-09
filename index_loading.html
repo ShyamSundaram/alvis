@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #slider .ui-slider-range { 
+	background: #a346f0; 
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <link href="index_loading.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<script type="text/javascript">
+    let i=0;
+    let q=0;
+    let index=-1;
+    
+    $(document).ready(function() {
+        var output=$('#output');
+        $("#slider").slider({
+            width: '5px',
+            range: "min",
+            height: '15px',
+            slide: function(event,ui)
+            {
+                output.html(ui.value);
+            }
+        });
+    });
+</script>
+<body>
+    <div class="banner">Algorithmic Visualizer</div>
+    <div class="navbar">
+<!--     <a href ="javascript:binarySearch()"></a> -->
+    <a></a>
+    <a href ="javascript:custom()">Custom Input</a>
+    
+    <a href="javascript:selectionSort()" >Selection sort </a>
+    <a href="javascript:appender_bubbleSort()">Bubble Sort</a>
+    <a href ="javascript:insertionSort()">Insertion Sort</a>
+    
+    <a href="javascript:lsearch()">Linear Search</a>
+    <a href ="javascript:binarySearch()">Binary Search</a>
+    
+    <!--<a id="lol" href ="javascript:p()">Pause</a>-->
+       <a id="lol" href ="javascript:p()">Speed</a>
+<!--     <a>Speed  <input id="speed" type="range" min="1" max="100" value="50"></a> -->
+    <div id="slider" style="width: 7%;background-color: white;float: right;margin-right:10%;margin-top: 10px;"></div>
+        <span id="output" style="background-color: white;display: none"></span>
+<!--         <a id="lol" href ="javascript:p()">Feedback</a> -->
+    </div><br/>
+    <!--SPEED-->
+    <!-- <div id="slider" style="width: 50%;background-color: orange;"></div>
+        Speed: <span id="output" style="background-color: orange;"></span><br><br> -->
+
+
+    <div class="header" style="height: 0px;margin-bottom: 50px;float: left"><h1 id="sort-header"></h1></div>
+    <h1 style="text-align: center; color: white;" id="title">Choose An Algorithm</h1>
+    <img id="start" src="pics/start.gif" style="margin-left: 14%;" />
+    <section class="data-container1" style="margin-bottom: 0px;"></section>
+    <div id="legend" style="display: none">
+    <div class="block2" style="height: 20px;float: left;margin-bottom: 300px;transform: translateX(5px);">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="1">Unsorted&nbsp;Array</b></div>
+    <div class="block2" style="height: 20px;background-color: #FF4949;float: left;margin-bottom: 260px;transform: translateX(5px);">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="2">Compared&nbsp;Elements</b></div>
+    <div class="block2" style="height: 20px;float: left;margin-bottom: 220px;transform: translateX(5px);background-color: #13CE66">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="3">Sorted&nbsp;Elements</b></div>
+</div>
+    <div id="Demo" style="margin-right: 50px;margin-top: 30px;margin-bottom: 0px;">
+    	<h2 id="psu" style="margin-top: 17px;margin-right: 80px;display: none">Pseudocode</h2>
+    </div>
+    <div id="Bale_loadz" style="display: none;height: 1px;width: 1px;">
+    <img src="pics/loading1.gif" style="height: 50%;width: 50%;" />
+    </div>
+    <div class="data-container" style="margin-top: 200px;margin-left: 230px;"></div>
+        <br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <!-- <div class="loader" id="load" style="float: center;margin-left: 200px;margin-top: 200px;"></div> -->
+
+    	    <div id="exp" style="margin-left: 30%;display: none">Welcome!</div>
+    	    <br/><br/>
+<div id="control" style="display: none">
+    <img src="pics/Right9.png" style="height: 3%;width: 3%;margin-left: 430px;" onclick="javascript:stepbackward();" />
+    <img id="c" src="pics/Play.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="(q==0)? document.getElementById('c').src='pause.png': document.getElementById('c').src='play.png';q=!q;;javascript:control(q);"/>
+    <img src="pics/Right3.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="javascript:stepforward();"/>
+</div>
+
+<br/><br/><br/><br/>
+<h1 style="display: none" id="code"> CODE </h1>
+
+<div class="tab" id="tab" style="display: none">
+    <div class="box bg-1">
+        <button id="pyt"  data-text="Open Project"><span>Python</span></button>
+        
+        <button id="cpp"  data-text="Create New"><span>C++</span></button>
+        
+        <button id="jav"  data-text="Publish"><span>Java</span></button>
+    </div>
+</div>
+
+<div id="editor" style="width: 100%;"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/monokai");
+            editor.session.setMode("ace/mode/CPP");
+            editor.setFontSize(17);
+            function openCity(opt,sort)
+            {
+                if(sort=='bubble')
+                {
+                if(opt=="one")
+                var code=`# Function to do Bubble sort 
+def BubbleSort(arr): 
+  
+    # Traverse through 1 to len(arr) 
+    for i in range(1, len(arr)): 
+  
+        key = arr[i] 
+  
+        # Move elements of arr[0..i-1], that are 
+        # greater than key, to one position ahead 
+        # of their current position 
+        j = i-1
+        while j >= 0 and key < arr[j] : 
+                arr[j + 1] = arr[j] 
+                j -= 1
+        arr[j + 1] = key 
+  
+  
+# Driver code to test above 
+arr = [12, 11, 13, 5, 6] 
+insertionSort(arr) 
+for i in range(len(arr)): 
+    print ("% d" % arr[i]) `;
+                else if(opt=="two")
+                var code=`#include <bits/stdc++.h> 
+using namespace std; 
+  
+/* Function to sort an array using insertion sort*/
+void insertionSort(int arr[], int n)  
+{  
+    int i, key, j;  
+    for (i = 1; i < n; i++) 
+    {  
+        key = arr[i];  
+        j = i - 1;  
+  
+        /* Move elements of arr[0..i-1], that are  
+        greater than key, to one position ahead  
+        of their current position */
+        while (j >= 0 && arr[j] > key) 
+        {  
+            arr[j + 1] = arr[j];  
+            j = j - 1;  
+        }  
+        arr[j + 1] = key;  
+    }  
+}  
+  
+// A utility function to print an array of size n  
+void printArray(int arr[], int n)  
+{  
+    int i;  
+    for (i = 0; i < n; i++)  
+        cout << arr[i] << " ";  
+    cout << endl; 
+}  
+  
+/* Driver code */
+int main()  
+{  
+    int arr[] = { 12, 11, 13, 5, 6 };  
+    int n = sizeof(arr) / sizeof(arr[0]);  
+  
+    insertionSort(arr, n);  
+    printArray(arr, n);  
+  
+    return 0;  
+}  `;
+                else
+                var code=`class InsertionSort { 
+    /*Function to sort array using insertion sort*/
+    void sort(int arr[]) 
+    { 
+        int n = arr.length; 
+        for (int i = 1; i < n; ++i) { 
+            int key = arr[i]; 
+            int j = i - 1; 
+  
+            /* Move elements of arr[0..i-1], that are 
+               greater than key, to one position ahead 
+               of their current position */
+            while (j >= 0 && arr[j] > key) { 
+                arr[j + 1] = arr[j]; 
+                j = j - 1; 
+            } 
+            arr[j + 1] = key; 
+        } 
+    } 
+  
+    /* A utility function to print array of size n*/
+    static void printArray(int arr[]) 
+    { 
+        int n = arr.length; 
+        for (int i = 0; i < n; ++i) 
+            System.out.print(arr[i] + " "); 
+  
+        System.out.println(); 
+    } 
+  
+    // Driver method 
+    public static void main(String args[]) 
+    { 
+        int arr[] = { 12, 11, 13, 5, 6 }; 
+  
+        InsertionSort ob = new InsertionSort(); 
+        ob.sort(arr); 
+  
+        printArray(arr); 
+    } 
+}`;
+                }
+                
+                else if(sort=='insertion')
+                {
+                    if(opt=="one")
+                var code=`# Function to do insertion sort 
+def insertionSort(arr): 
+  
+    # Traverse through 1 to len(arr) 
+    for i in range(1, len(arr)): 
+  
+        key = arr[i] 
+  
+        # Move elements of arr[0..i-1], that are 
+        # greater than key, to one position ahead 
+        # of their current position 
+        j = i-1
+        while j >= 0 and key < arr[j] : 
+                arr[j + 1] = arr[j] 
+                j -= 1
+        arr[j + 1] = key 
+  
+  
+# Driver code to test above 
+arr = [12, 11, 13, 5, 6] 
+insertionSort(arr) 
+for i in range(len(arr)): 
+    print ("% d" % arr[i]) `;
+                else if(opt=="two")
+                var code=`#include <bits/stdc++.h> 
+using namespace std; 
+  
+/* Function to sort an array using insertion sort*/
+void insertionSort(int arr[], int n)  
+{  
+    int i, key, j;  
+    for (i = 1; i < n; i++) 
+    {  
+        key = arr[i];  
+        j = i - 1;  
+  
+        /* Move elements of arr[0..i-1], that are  
+        greater than key, to one position ahead  
+        of their current position */
+        while (j >= 0 && arr[j] > key) 
+        {  
+            arr[j + 1] = arr[j];  
+            j = j - 1;  
+        }  
+        arr[j + 1] = key;  
+    }  
+}  
+  
+// A utility function to print an array of size n  
+void printArray(int arr[], int n)  
+{  
+    int i;  
+    for (i = 0; i < n; i++)  
+        cout << arr[i] << " ";  
+    cout << endl; 
+}  
+  
+/* Driver code */
+int main()  
+{  
+    int arr[] = { 12, 11, 13, 5, 6 };  
+    int n = sizeof(arr) / sizeof(arr[0]);  
+  
+    insertionSort(arr, n);  
+    printArray(arr, n);  
+  
+    return 0;  
+}  `;
+                else
+                var code=`class InsertionSort { 
+    /*Function to sort array using insertion sort*/
+    void sort(int arr[]) 
+    { 
+        int n = arr.length; 
+        for (int i = 1; i < n; ++i) { 
+            int key = arr[i]; 
+            int j = i - 1; 
+  
+            /* Move elements of arr[0..i-1], that are 
+               greater than key, to one position ahead 
+               of their current position */
+            while (j >= 0 && arr[j] > key) { 
+                arr[j + 1] = arr[j]; 
+                j = j - 1; 
+            } 
+            arr[j + 1] = key; 
+        } 
+    } 
+  
+    /* A utility function to print array of size n*/
+    static void printArray(int arr[]) 
+    { 
+        int n = arr.length; 
+        for (int i = 0; i < n; ++i) 
+            System.out.print(arr[i] + " "); 
+  
+        System.out.println(); 
+    } 
+  
+    // Driver method 
+    public static void main(String args[]) 
+    { 
+        int arr[] = { 12, 11, 13, 5, 6 }; 
+  
+        InsertionSort ob = new InsertionSort(); 
+        ob.sort(arr); 
+  
+        printArray(arr); 
+    } 
+}`;
+                }
+
+                else if(sort=='selection')
+                {
+                    if(opt=="one")
+                    {
+                        var code=`import sys 
+A = [64, 25, 12, 22, 11] 
+  
+# Traverse through all array elements 
+for i in range(len(A)): 
+      
+    # Find the minimum element in remaining  
+    # unsorted array 
+    min_idx = i 
+    for j in range(i+1, len(A)): 
+        if A[min_idx] > A[j]: 
+            min_idx = j 
+              
+    # Swap the found minimum element with  
+    # the first element         
+    A[i], A[min_idx] = A[min_idx], A[i] 
+  
+# Driver code to test above 
+print ("Sorted array") 
+for i in range(len(A)): 
+    print("%d" %A[i]),  `;
+                    }
+                    else if(opt=="two")
+                    {
+                        var code=`#include bits/stdc++.h
+using namespace std; 
+  
+void swap(int *xp, int *yp)  
+{  
+    int temp = *xp;  
+    *xp = *yp;  
+    *yp = temp;  
+}  
+  
+void selectionSort(int arr[], int n)  
+{  
+    int i, j, min_idx;  
+  
+    // One by one move boundary of unsorted subarray  
+    for (i = 0; i < n-1; i++)  
+    {  
+        // Find the minimum element in unsorted array  
+        min_idx = i;  
+        for (j = i+1; j < n; j++)  
+        if (arr[j] < arr[min_idx])  
+            min_idx = j;  
+  
+        // Swap the found minimum element with the first element  
+        swap(&arr[min_idx], &arr[i]);  
+    }  
+}  
+  
+/* Function to print an array */
+void printArray(int arr[], int size)  
+{  
+    int i;  
+    for (i=0; i < size; i++)  
+        cout << arr[i] << " ";  
+    cout << endl;  
+}  
+  
+// Driver program to test above functions  
+int main()  
+{  
+    int arr[] = {64, 25, 12, 22, 11};  
+    int n = sizeof(arr)/sizeof(arr[0]);  
+    selectionSort(arr, n);  
+    cout << "Sorted array: ";  
+    printArray(arr, n);  
+    return 0;  
+}`;
+                    }
+                    else{
+                        var code=`class SelectionSort 
+{ 
+    void sort(int arr[]) 
+    { 
+        int n = arr.length; 
+  
+        // One by one move boundary of unsorted subarray 
+        for (int i = 0; i < n-1; i++) 
+        { 
+            // Find the minimum element in unsorted array 
+            int min_idx = i; 
+            for (int j = i+1; j < n; j++) 
+                if (arr[j] < arr[min_idx]) 
+                    min_idx = j; 
+  
+            // Swap the found minimum element with the first 
+            // element 
+            int temp = arr[min_idx]; 
+            arr[min_idx] = arr[i]; 
+            arr[i] = temp; 
+        } 
+    } 
+  
+    // Prints the array 
+    void printArray(int arr[]) 
+    { 
+        int n = arr.length; 
+        for (int i=0; i<n; ++i) 
+            System.out.print(arr[i]+" "); 
+        System.out.println(); 
+    } 
+  
+    // Driver code to test above 
+    public static void main(String args[]) 
+    { 
+        SelectionSort ob = new SelectionSort(); 
+        int arr[] = {64,25,12,22,11}; 
+        ob.sort(arr); 
+        System.out.println("Sorted array"); 
+        ob.printArray(arr); 
+    } 
+}`;
+                    }
+                }
+                
+                else if(sort=='linear')
+                {
+                    if(opt=="one")
+                    {
+                        var code=`def search(arr, n, x):
+ 
+ for i in range(0, n):
+     if (arr[i] == x):
+         return i
+ return -1
+
+
+# Driver Code
+arr = [2, 3, 4, 10, 40]
+x = 10
+n = len(arr)
+
+# Function call
+result = search(arr, n, x)
+if(result == -1):
+ print("Element is not present in array")
+else:
+ print("Element is present at index", result)`;
+                    }
+                    else if(opt=="two")
+                    {
+                        var code=`#include <iostream>
+using namespace std;
+ 
+int search(int arr[], int n, int x)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        if (arr[i] == x)
+            return i;
+    return -1;
+}
+ 
+// Driver code
+int main(void)
+{
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int x = 10;
+    int n = sizeof(arr) / sizeof(arr[0]);
+   
+    // Function call
+    int result = search(arr, n, x);
+    (result == -1)
+        ? cout << "Element is not present in array"
+        : cout << "Element is present at index " << result;
+    return 0;
+}`;
+                    }
+                    else{
+                        var code=`class GFG 
+{
+    public static int search(int arr[], int x)
+    {
+        int n = arr.length;
+        for (int i = 0; i < n; i++) 
+        {
+            if (arr[i] == x)
+                return i;
+        }
+        return -1;
+    }
+ 
+    // Driver code
+    public static void main(String args[])
+    {
+        int arr[] = { 2, 3, 4, 10, 40 };
+        int x = 10;
+ 
+        // Function call
+        int result = search(arr, x);
+        if (result == -1)
+            System.out.print(
+                "Element is not present in array");
+        else
+            System.out.print("Element is present at index "
+                             + result);
+    }
+}`;
+                    }
+                }
+                
+                else if(sort=='binary')
+                {
+                    if(opt=="one")
+                    {
+                        var code=`# Returns index of x in arr if present, else -1 
+def binarySearch (arr, l, r, x): 
+  
+    # Check base case 
+    if r >= l: 
+  
+        mid = l + (r - l) // 2
+  
+        # If element is present at the middle itself 
+        if arr[mid] == x: 
+            return mid 
+          
+        # If element is smaller than mid, then it  
+        # can only be present in left subarray 
+        elif arr[mid] > x: 
+            return binarySearch(arr, l, mid-1, x) 
+  
+        # Else the element can only be present  
+        # in right subarray 
+        else: 
+            return binarySearch(arr, mid + 1, r, x) 
+  
+    else: 
+        # Element is not present in the array 
+        return -1
+  
+# Driver Code 
+arr = [ 2, 3, 4, 10, 40 ] 
+x = 10
+  
+# Function call 
+result = binarySearch(arr, 0, len(arr)-1, x) 
+  
+if result != -1: 
+    print ("Element is present at index % d" % result) 
+else: 
+    print ("Element is not present in array")`;
+                    }
+                    else if(opt=="two")
+                    {
+                        var code=`#include <bits/stdc++.h> 
+using namespace std; 
+  
+// A iterative binary search function. It returns 
+// location of x in given array arr[l..r] if present, 
+// otherwise -1 
+int binarySearch(int arr[], int l, int r, int x) 
+{ 
+    while (l <= r) { 
+        int m = l + (r - l) / 2; 
+  
+        // Check if x is present at mid 
+        if (arr[m] == x) 
+            return m; 
+  
+        // If x greater, ignore left half 
+        if (arr[m] < x) 
+            l = m + 1; 
+  
+        // If x is smaller, ignore right half 
+        else
+            r = m - 1; 
+    } 
+  
+    // if we reach here, then element was 
+    // not present 
+    return -1; 
+} 
+  
+int main(void) 
+{ 
+    int arr[] = { 2, 3, 4, 10, 40 }; 
+    int x = 10; 
+    int n = sizeof(arr) / sizeof(arr[0]); 
+    int result = binarySearch(arr, 0, n - 1, x); 
+    (result == -1) ? cout << "Element is not present in array"
+                   : cout << "Element is present at index " << result; 
+    return 0; 
+} `;
+                    }
+                    else
+                    {
+                        var code=`class BinarySearch { 
+    // Returns index of x if it is present in arr[], 
+    // else return -1 
+    int binarySearch(int arr[], int x) 
+    { 
+        int l = 0, r = arr.length - 1; 
+        while (l <= r) { 
+            int m = l + (r - l) / 2; 
+  
+            // Check if x is present at mid 
+            if (arr[m] == x) 
+                return m; 
+  
+            // If x greater, ignore left half 
+            if (arr[m] < x) 
+                l = m + 1; 
+  
+            // If x is smaller, ignore right half 
+            else
+                r = m - 1; 
+        } 
+  
+        // if we reach here, then element was 
+        // not present 
+        return -1; 
+    } 
+  
+    // Driver method to test above 
+    public static void main(String args[]) 
+    { 
+        BinarySearch ob = new BinarySearch(); 
+        int arr[] = { 2, 3, 4, 10, 40 }; 
+        int n = arr.length; 
+        int x = 10; 
+        int result = ob.binarySearch(arr, x); 
+        if (result == -1) 
+            System.out.println("Element not present"); 
+        else
+            System.out.println("Element found at "
+                               + "index " + result); 
+    } 
+} `;
+                    }
+                }
+                //let line=document.createTextNode(code);
+                //line.innerHTML=code;
+                document.getElementById("editor").innerHTML="<pre>"+code+"</pre>";
+            }
+ 
+</script>
+
+<!-- <script src="test_index_loading.js"></script> -->
+<script src="lal.js"></script>
+</html>
+
+
+
+
