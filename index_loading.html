@@ -42,7 +42,7 @@
 <body>
     <div class="banner">Alvis</div>
     <div class="navbar">
-<!--     <a href ="javascript:binarySearch()"></a> -->
+    <!--     <a href ="javascript:binarySearch()"></a> -->
     <a></a>
     <a href ="javascript:custom()">Custom Input</a>
     
@@ -55,10 +55,10 @@
     
     <!--<a id="lol" href ="javascript:p()">Pause</a>-->
        <a id="lol" href ="javascript:p()">Speed</a>
-<!--     <a>Speed  <input id="speed" type="range" min="1" max="100" value="50"></a> -->
+    <!--     <a>Speed  <input id="speed" type="range" min="1" max="100" value="50"></a> -->
     <div id="slider" style="width: 7%;background-color: white;float: right;margin-right:10%;margin-top: 10px;"></div>
         <span id="output" style="background-color: white;display: none"></span>
-<!--         <a id="lol" href ="javascript:p()">Feedback</a> -->
+    <!--         <a id="lol" href ="javascript:p()">Feedback</a> -->
     </div><br/>
     <!--SPEED-->
     <!-- <div id="slider" style="width: 50%;background-color: orange;"></div>
@@ -88,28 +88,28 @@
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <!-- <div class="loader" id="load" style="float: center;margin-left: 200px;margin-top: 200px;"></div> -->
 
-    	    <div id="exp" style="margin-left: 30%;display: none">Welcome!</div>
-    	    <br/><br/>
-<div id="control" style="display: none">
-    <img src="pics/blackleft.png" style="height: 3%;width: 3%;margin-left: 430px;" onclick="javascript:stepbackward();" />
-    <img id="c" src="pics/blackplay.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="(q==0)? document.getElementById('c').src='pics/pause.png': document.getElementById('c').src='pics/blackplay.png';q=!q;;javascript:control(q);"/>
-    <img src="pics/blackright.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="javascript:stepforward();"/>
-</div>
-
-<br/><br/><br/><br/>
-<h1 style="display: none" id="code"> CODE </h1>
-
-<div class="tab" id="tab" style="display: none">
-    <div class="box bg-1">
-        <button id="pyt"  data-text="Open Project"><span>Python</span></button>
-        
-        <button id="cpp"  data-text="Create New"><span>C++</span></button>
-        
-        <button id="jav"  data-text="Publish"><span>Java</span></button>
+    <div id="exp" style="margin-left: 30%;display: none">Controls</div>
+    <br/><br/>
+    <div id="control" style="display: none">
+        <img src="pics/blackleft.png" style="height: 3%;width: 3%;margin-left: 430px;" onclick="javascript:stepbackward();" />
+        <img id="c" src="pics/blackplay.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="(q==0)? document.getElementById('c').src='pics/pause.png': document.getElementById('c').src='pics/blackplay.png';q=!q;;javascript:control(q);"/>
+        <img src="pics/blackright.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="javascript:stepforward();"/>
     </div>
-</div>
 
-<div id="editor" style="width: 100%;"></div>
+    <br/><br/><br/><br/>
+    <h1 style="display: none" id="code"> CODE </h1>
+
+    <div class="tab" id="tab" style="display: none">
+        <div class="box bg-1">
+            <button id="pyt"  data-text="Open Project"><span>Python</span></button>
+            
+            <button id="cpp"  data-text="Create New"><span>C++</span></button>
+            
+            <button id="jav"  data-text="Publish"><span>Java</span></button>
+        </div>
+    </div>
+
+    <div id="editor" style="width: 100%;"></div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
