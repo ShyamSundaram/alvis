@@ -43,22 +43,22 @@
     <div class="banner">Alvis</div>
     <div class="navbar">
     <!--     <a href ="javascript:binarySearch()"></a> -->
-    <a></a>
-    <a href ="javascript:custom()">Custom Input</a>
-    
-    <a href="javascript:selectionSort()" >Selection Sort </a>
-    <a href="javascript:appender_bubbleSort()">Bubble Sort</a>
-    <a href ="javascript:insertionSort()">Insertion Sort</a>
-    
-    <a href="javascript:lsearch()">Linear Search</a>
-    <a href ="javascript:binarySearch()">Binary Search</a>
-    
-    <!--<a id="lol" href ="javascript:p()">Pause</a>-->
-       <a id="lol" href ="javascript:p()">Speed</a>
-    <!--     <a>Speed  <input id="speed" type="range" min="1" max="100" value="50"></a> -->
-    <div id="slider" style="width: 7%;background-color: white;float: right;margin-right:10%;margin-top: 10px;"></div>
+        <a></a>
+        <a href ="javascript:custom()">Custom Input</a>
+        
+        <a href="javascript:selectionSort()" >Selection Sort </a>
+        <a href="javascript:appender_bubbleSort()">Bubble Sort</a>
+        <a href ="javascript:insertionSort()">Insertion Sort</a>
+        
+        <a href="javascript:lsearch()">Linear Search</a>
+        <a href ="javascript:binarySearch()">Binary Search</a>
+        
+        <!--<a id="lol" href ="javascript:p()">Pause</a>-->
+        <a id="lol" href ="javascript:p()">Speed</a>
+        <!--     <a>Speed  <input id="speed" type="range" min="1" max="100" value="50"></a> -->
+        <div id="slider" style="width: 7%;background-color: white;float: right;margin-right:10%;margin-top: 10px;"></div>
         <span id="output" style="background-color: white;display: none"></span>
-    <!--         <a id="lol" href ="javascript:p()">Feedback</a> -->
+        <!--         <a id="lol" href ="javascript:p()">Feedback</a> -->
     </div><br/>
     <!--SPEED-->
     <!-- <div id="slider" style="width: 50%;background-color: orange;"></div>
@@ -67,7 +67,8 @@
 
     <div class="header" style="height: 0px;margin-bottom: 50px;float: left"><h1 id="sort-header"></h1></div>
     <h1 style="text-align: center; color: white;" id="title">Choose An Algorithm</h1>
-    <img id="start" src="pics/start.gif" style="margin-left: 14%;" />
+    <!-- <img id="start" src="pics/start.gif" style="margin-left: 14%;" /> -->
+    <img id="start" src="pics/start.gif" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
     <section class="data-container1" style="margin-bottom: 0px;"></section>
     <div id="legend" style="display: none">
         <div class="block2" style="height: 20px;float: left;margin-bottom: 300px;transform: translateX(5px);">
@@ -77,13 +78,14 @@
         <div class="block2" style="height: 20px;float: left;margin-bottom: 220px;transform: translateX(5px);background-color: #13CE66">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="3">Sorted&nbsp;Elements</b></div>
     </div>
-    <div id="Demo" style="margin-right: 50px;margin-top: 30px;margin-bottom: 0px;">
-    	<h2 id="psu" style="margin-top: 17px;margin-right: 80px;display: none">Pseudocode</h2>
-    </div>
+    
     <div id="Bale_loadz" style="display: none;height: 1px;width: 1px;">
-    <img src="pics/start.gif" style="height: 50%;width: 50%;" />
+        <img src="pics/start.gif" style="height: 50%;width: 50%;" />
     </div>
     <div class="data-container" style="margin-top: 200px;margin-left: 230px;"></div>
+    <div id="Demo" style="display: none;"> <!--style="margin-right: 50px;margin-top: 30px;margin-bottom: 0px;"> -->
+    	<h2 id="psu" style="margin-top: 17px;margin-right: 80px;display: none">Pseudocode</h2>
+    </div>
         <br/><br/><br/><br/><br/><br/>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <!-- <div class="loader" id="load" style="float: center;margin-left: 200px;margin-top: 200px;"></div> -->
@@ -91,7 +93,7 @@
     <div id="exp" style="margin-left: 30%;display: none">Controls</div>
     <br/><br/>
     <div id="control" style="display: none">
-        <img src="pics/blackleft.png" style="height: 3%;width: 3%;margin-left: 430px;" onclick="javascript:stepbackward();" />
+        <img src="pics/blackleft.png" style="height: 3%;width: 3%;margin-left: 490px;" onclick="javascript:stepbackward();" />
         <img id="c" src="pics/blackplay.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="(q==0)? document.getElementById('c').src='pics/pause.png': document.getElementById('c').src='pics/blackplay.png';q=!q;;javascript:control(q);"/>
         <img src="pics/blackright.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="javascript:stepforward();"/>
     </div>
