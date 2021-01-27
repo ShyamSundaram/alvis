@@ -16,7 +16,7 @@
 
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<body style="background-color: white;">
+<body >
 <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
   <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
   <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
@@ -28,8 +28,8 @@
 <header class="w3-container w3-theme w3-padding" id="myHeader">
   <a href="mail.html" class="fa fa-bars w3-xlarge w3-button w3-theme"></a> 
   <div class="w3-center">
-  <h4 style="font-size:100px;">Alvis</h4>
-  <h1 class="w3-xxxlarge w3-animate-bottom">Ace Data Structures and Algorithms</h1>
+  <h4 style="font-size70px;">Ace Data Structures and Algorithms</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">Algorithmic Visualiser</h1>
     <div class="w3-padding-32">
 <!--       <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">TEAM MEMBERS</button>
  -->    </div>
@@ -54,7 +54,7 @@
 <div class="w3-row-padding w3-center w3-margin-top">
 <div class="w3-third" style="float: left;">
   <div class="w3-card w3-container" style="min-height:260px;background-color: white">
-  <h3>Sorting and Searching</h3><br>
+  <h3 style="color:black">Sorting and Searching</h3><br>
   <a href="index_loading.html" target="_blank"><img src="pics/sorting.png" style="height: 150px;width: 300px;"></a>
   </div>
 </div>
@@ -64,7 +64,7 @@
 
 <div class="w3-third" style="float: right;">
   <div class="w3-card w3-container" style="margin-top: 0px;min-height:200px;background-color: white;">
-  <h3>Graphs</h3><br>
+  <h3 style="color:black">Graphs</h3><br>
   <a href="banner.html" target="_blank"><img src="pics/graph.png" style="height: 175px;width: 200px;"></a>
   </div>
 </div>
@@ -134,7 +134,7 @@ async function quickbubbleSort(delay = 100)
       const value2 = Math.floor(Math.random() * 100);
       //blocks[j].style.backgroundColor = "#58b7ff";
       if(value1%3==0){
-        blocks[j].style.backgroundColor="black";
+        blocks[j].style.backgroundColor="white";
         blocks[j].style.height=`${value1}px`;
       }
       if (value1 > value2) 
@@ -171,21 +171,20 @@ function generateBlocks(num = 10) {
 
   quickbubbleSort();
 </script>
-
 <footer style="margin-top: 0%;">
 <div class="footer" style="margin-top: 1%">
   <div class="inner-footer">
 
     <!--  for company name and description -->
-    <div class="footer-items">
+<!--     <div class="footer-items">
       <h1>Feedback</h1>
       <p>Making algorithms easy!</p>
-      <!-- <a href='https://www.symptoma.es/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d'></script>
-      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/766601/t/11"></script> -->
+      <a href='https://www.symptoma.es/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d'></script>
+      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/766601/t/11"></script>
       Visitors
       <a href='https://www.symptoma.es/'>Symptoma</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=e1328ea9e8363748ce1769e64b03008dc8cd4776'></script>
       <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/772807/t/5"></script>
-    </div>
+    </div> -->
 
     <!--  for quick links  -->
     <div class="footer-items">
@@ -198,22 +197,17 @@ function generateBlocks(num = 10) {
           <a href="mail.html"><li>Feedback</li></a>
         </ul>
     </div>
-      <!-- <div style="margin-left: 45%;margin-top: 0%">
-      <a href='https://www.symptoma.es/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d'></script>
-      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/766601/t/11"></script>
-      </div> -->
-      <!--  for some other links -->
-      <!--     <div class="footer-items">
-            <h3>Recipes</h3>
-            <div class="border1"></div>  for the underline -->
-      <!--         <ul>
-                <a href="#"><li>Indian</li></a>
-                <a href="#"><li>Chinese</li></a>
-                <a href="#"><li>Mexican</li></a>
-                <a href="#"><li>Italian</li></a>
-              </ul> -->
-      <!--     </div> -->
 
+      <div class="footer-items">
+          <h3>Team</h3>
+          <div class="border1"></div> 
+         <ul> Shyam Sundaram <a href="https://www.linkedin.com/in/shyam-sundaram-641735192"><i class="fab fa-linkedin"></i></a></ul>
+          <ul>Shyam Nair <a href="https://www.linkedin.com/in/shyam-nair-189765201"><i class="fab fa-linkedin"></i></a></ul>
+         <ul> Akash Jain <a href="https://www.linkedin.com/in/akash-jain-78393418b"><i class="fab fa-linkedin"></i></a></ul>
+         <ul> S Vaibhave Davey <a href="https://www.linkedin.com/in/s-vaibhave-davey-a8798118b/"><i class="fab fa-linkedin"></i></a></ul>
+         <ul>Dr. Oswald C <a href="https://www.linkedin.com/in/oswald-c-bb5b37b7/?originalSubdomain=in"><i class="fab fa-linkedin"></i></a></ul>
+
+        </div> 
       <!--  for contact us info -->
     <div class="footer-items">
       <h3>Contact us</h3>
@@ -226,20 +220,17 @@ function generateBlocks(num = 10) {
       
         <!--   for social links -->
 
-        <div>
-          &nbsp;&nbsp;<h3>Team  </h3>
-          Oswald C <a href="https://www.linkedin.com/in/oswald-c-bb5b37b7/?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
-          <br>Shyam Sundaram <a href="https://www.linkedin.com/in/shyam-sundaram-641735192"><i class="fab fa-linkedin"></i></a>
-          <br/>Shyam Nair <a href="https://www.linkedin.com/in/shyam-nair-189765201"><i class="fab fa-linkedin"></i></a>
-          <br>Akash Jain <a href="https://www.linkedin.com/in/akash-jain-78393418b"><i class="fab fa-linkedin"></i></a>
-          <br/>S Vaibhave Davey <a href="https://www.linkedin.com/in/s-vaibhave-davey-a8798118b/"><i class="fab fa-linkedin"></i></a>
-        </div> 
+
+          <ul><a href='https://www.symptoma.es/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/766601/t/11"></script></ul>
+
+
     </div>
   </div>
   
   <!--   Footer Bottom start  -->
   <div class="footer-bottom">
-    Copyright &copy; alvis 2020.
+    Department of CSE, Vellore Institute of Technology, Chennai
   </div>
 </div>
 </footer>
