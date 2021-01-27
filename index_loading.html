@@ -3,12 +3,14 @@
 <head>
     <style>
         #slider .ui-slider-range { 
-	background: #a346f0; 
+	    background: #a346f0; 
     }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>Alvis Sort and search</title>
 
     <!--bootstrap-->
@@ -18,7 +20,7 @@
     <link href="index_loading.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <script type="text/javascript">
@@ -62,57 +64,88 @@
     </div><br/>
     <!--SPEED-->
     <!-- <div id="slider" style="width: 50%;background-color: orange;"></div>
-        Speed: <span id="output" style="background-color: orange;"></span><br><br> -->
+    Speed: <span id="output" style="background-color: orange;"></span><br><br> -->
 
-
-    <div class="header" style="height: 0px;margin-bottom: 50px;float: left"><h1 id="sort-header"></h1></div>
-    <h1 style="text-align: center; color: white;" id="title">Choose An Algorithm</h1>
-    <!-- <img id="start" src="pics/start.gif" style="margin-left: 14%;" /> -->
-    <img id="start" src="pics/start.gif" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
-    <section class="data-container1" style="margin-bottom: 0px;"></section>
-    <div id="legend" style="display: none">
-        <div class="block2" style="height: 20px;float: left;margin-bottom: 300px;transform: translateX(5px);">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="1">Unsorted&nbsp;Array</b></div>
-        <div class="block2" style="height: 20px;background-color: #FF4949;float: left;margin-bottom: 260px;transform: translateX(5px);">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="2">Compared&nbsp;Elements</b></div>
-        <div class="block2" style="height: 20px;float: left;margin-bottom: 220px;transform: translateX(5px);background-color: #13CE66">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="3">Sorted&nbsp;Elements</b></div>
-    </div>
     
-    <div id="Bale_loadz" style="display: none;height: 1px;width: 1px;">
-        <img src="pics/start.gif" style="height: 50%;width: 50%;" />
-    </div>
-    <div class="data-container" style="margin-top: 200px;margin-left: 230px;"></div>
-    <div id="Demo" style="display: none;"> <!--style="margin-right: 50px;margin-top: 30px;margin-bottom: 0px;"> -->
-    	<h2 id="psu" style="margin-top: 17px;margin-right: 80px;display: none">Pseudocode</h2>
-    </div>
-        <br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <!-- <div class="loader" id="load" style="float: center;margin-left: 200px;margin-top: 200px;"></div> -->
+    <div class="container">
+        <div class="row">
+            <div class="header" style="height: 0px;margin-bottom: 50px;float: left"><h1 id="sort-header"></h1></div>
+            <h1 style="text-align: center; color: white;" id="title">Choose An Algorithm</h1>
+            <img id="start" src="pics/start.gif" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+        </div>
+        
+        <!-- <img id="start" src="pics/start.gif" style="margin-left: 14%;" /> -->
+        
 
-    <div id="exp" style="margin-left: 30%;display: none">Controls</div>
-    <br/><br/>
-    <div id="control" style="display: none">
-        <img src="pics/blackleft.png" style="height: 3%;width: 3%;margin-left: 490px;" onclick="javascript:stepbackward();" />
-        <img id="c" src="pics/blackplay.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="(q==0)? document.getElementById('c').src='pics/pause.png': document.getElementById('c').src='pics/blackplay.png';q=!q;;javascript:control(q);"/>
-        <img src="pics/blackright.png" style="height: 3%;width: 3%;margin-left: 50px;" onclick="javascript:stepforward();"/>
-    </div>
 
-    <br/><br/><br/><br/>
-    <h1 style="display: none" id="code"> CODE </h1>
+        <!-- <div id="legend" style="display: none">
+            <div class="block2" style="height: 20px;margin-bottom: 300px;transform: translateX(5px);">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="1">Unsorted&nbsp;Array</b></div>
+            <div class="block2" style="height: 20px;background-color: #FF4949;margin-bottom: 260px;transform: translateX(5px);">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="2">Compared&nbsp;Elements</b></div>
+            <div class="block2" style="height: 20px;margin-bottom: 220px;transform: translateX(5px);background-color: #13CE66">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="3">Sorted&nbsp;Elements</b></div>
+        </div> -->
+        
+        
+        <div class="row">
+            <div class="col-10">
+                <div id="Bale_loadz" style="display: none;height: 1px;width: 1px;">
+                    <img src="pics/start.gif" style="height: 80%;width: 60%;" />
+                </div>
+                <div class="data-container" style="margin-top: 200px;margin-left: 230px;"></div>
+            </div>
+            <div class="col-2 pull-right">
+                <div id="Demo" style="display: none;"> <!--style="margin-right: 50px;margin-top: 30px;margin-bottom: 0px;"> -->
+                    <h2 id="psu" style="margin-top: 17px;margin-right: 80px;display: none">Pseudocode</h2>
+                </div>
+            </div>
+        </div>
 
-    <div class="tab" id="tab" style="display: none">
-        <div class="box bg-1">
-            <button id="pyt"  data-text="Open Project"><span>Python</span></button>
+        
+        <!-- <div class="loader" id="load" style="float: center;margin-left: 200px;margin-top: 200px;"></div> -->
+
+        <div class="row">
+                <div class="col" id="control">
+                    <img src="pics/blackleft.png" style="height: 20%;width: auto;margin-left: 250px;" onclick="javascript:stepbackward();" />
+                    <img id="c" src="pics/blackplay2.png" style="height: 20%;width: auto;margin-left: 50px;" onclick="(q==0)? document.getElementById('c').src='pics/pause2.png': document.getElementById('c').src='pics/blackplay2.png';q=!q;;javascript:control(q);"/>
+                    <img src="pics/blackright.png" style="height: 20%;width: auto;margin-left: 50px;" onclick="javascript:stepforward();"/>
+                </div>
             
-            <button id="cpp"  data-text="Create New"><span>C++</span></button>
-            
-            <button id="jav"  data-text="Publish"><span>Java</span></button>
+
+            <div class="col text-center">
+                <div id="exp" style="display: none">Controls</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="legend" style="display: none">
+                <div class="block2" style="height: 20px;margin-bottom: 300px;transform: translateX(5px);">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="1">Unsorted&nbsp;Array</b></div>
+                <div class="block2" style="height: 20px;background-color: #FF4949;margin-bottom: 260px;transform: translateX(5px);">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="2">Compared&nbsp;Elements</b></div>
+                <div class="block2" style="height: 20px;margin-bottom: 220px;transform: translateX(5px);background-color: #13CE66">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b id="3">Sorted&nbsp;Elements</b></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <h1 style="display: none" id="code"> CODE </h1>
+            <div class="tab" id="tab" style="display: none">
+                <div class="box bg-1">
+                    <button id="pyt"  data-text="Open Project"><span>Python</span></button>
+                    
+                    <button id="cpp"  data-text="Create New"><span>C++</span></button>
+                    
+                    <button id="jav"  data-text="Publish"><span>Java</span></button>
+                </div>
+            </div>
+
+            <div id="editor" style="width: 100%;"></div>
         </div>
     </div>
-
-    <div id="editor" style="width: 100%;"></div>
 </body>
+
 <div id="mybutton">
 <button class="feedback"  onclick=" window.open('mail.html','_blank')">Feedback</button>
 </div>
