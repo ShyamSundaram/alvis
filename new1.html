@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BFS visualiser</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="vis.css">
+        <script src="vis.js"></script>
+        <script src="graph_generator.js" async></script>
+        <script src="tree-generator.js" async></script>
+        <script src="bfs.js" async></script>
+        <script src="dfs.js" async></script>
+        <script src="prims.js" async></script>
+        <script src="kruskal.js" async></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="graph-generator-area column1" id="graph-generator-area">
+                <h2><label for="sizeOfMatrix">Enter number of nodes:</label>
+                <input type="number" id="sizeOfMatrix" name="sizeOfMatrix" min="2" max="10">
+                <button type="button" onclick="generateInputMatrix(document.getElementById('sizeOfMatrix').value)">Submit</button></h2>
+                <br><br>
+                <div id="container" style="width:90%;"></div>   
+                <div id="container" style="width:95%;display: flex;overflow:hidden;">         
+                    <div id="media" style="width:60%;height:620px;"></div>
+                    <div id="pseudocode-container" style="width:40%;height:620px;"></div>
+                </div>
+                <br><br>
+                <div id="button-area" style="width:95%;"></div>
+            </div>
+            <div class="tree-generator-area column2" id="tree-generator-area" >
+                <div id="tree-container" style="width:90">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
