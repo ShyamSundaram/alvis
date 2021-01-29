@@ -109,20 +109,25 @@ function Pseudo(opt) //0 for bubble and 1 for insertion
 {
   //var code=["procedure bubbleSort( list : array of items )","&nbsp;&nbsp;loop = list.count;","&nbsp;&nbsp;for i = 0 to loop-1 do:", "&nbsp;&nbsp;&nbsp;&nbsp;swapped = false","&nbsp;&nbsp;&nbsp;&nbsp;for j = 0 to loop-1 do:","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if list[j] > list[j+1] then","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap( list[j], list[j+1] )","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swapped = true", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end if","&nbsp;&nbsp;&nbsp;&nbsp;end for","&nbsp;&nbsp;&nbsp;&nbsp;if(not swapped) then","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break","&nbsp;&nbsp;&nbsp;&nbsp;end if","&nbsp;&nbsp;&nbsp;&nbsp;end for","end procedure return list"];
   if(opt==-1)
-  var code=["l=0","r=length(A)-1","while(l<=r):","&nbsp;&nbsp;m=(l+r)//2","&nbsp;&nbsp;if(A[m]==x)","&nbsp;&nbsp;&nbsp;&nbsp;return m","&nbsp;&nbsp;else if(A[m]<=x)","&nbsp;&nbsp;&nbsp;&nbsp;l=m+1","&nbsp;&nbsp;else","&nbsp;&nbsp;&nbsp;&nbsp;r=m-1"];
+  var code=["l,r=0,|A|-1","while(l<=r):","&nbsp;&nbsp;m=(l+r)//2","&nbsp;&nbsp;if(A[m]==x)","&nbsp;&nbsp;&nbsp;&nbsp;return m","&nbsp;&nbsp;else if(A[m]<=x)","&nbsp;&nbsp;&nbsp;&nbsp;l=m+1","&nbsp;&nbsp;else","&nbsp;&nbsp;&nbsp;&nbsp;r=m-1"];
   if(opt===3)
   var code=["for i: 0 to n","&nbsp;&nbsp;min = i","&nbsp;&nbsp;for j: i+1 to n","&nbsp;&nbsp;&nbsp;&nbsp;if a[j] > a[min]:","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; min =j","&nbsp;&nbsp;swap(a[i],a[min])"];
   if(opt==0)
   var code=["for i: 1 to n","&nbsp;&nbsp;for j: 1 to n-i+1","&nbsp;&nbsp;&nbsp;&nbsp;if a[j]>a[j+1]:","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(a[j],a[j+1])"];
   if(opt==2)
   var code=["for i: 0 to n","&nbsp;&nbsp;if a[i]==value ","&nbsp;&nbsp;&nbsp;&nbsp;element found at index i","&nbsp;&nbsp;&nbsp;&nbsp;break","&nbsp;&nbsp;continue"];
-  else if(opt===1)
+  if(opt===1)
   var code=["for i=1 to length(array)","&nbsp;&nbsp;key=array[i]","&nbsp;&nbsp;j=i-1","&nbsp;&nbsp;while j>0 and array[j]>key","&nbsp;&nbsp;&nbsp;&nbsp;array[i+1]=array[i]","&nbsp;&nbsp;&nbsp;&nbsp;j=j-1","&nbsp;&nbsp;array[i+1]=key"];
+  
+  if(opt==-1){
+    console.log("h");
+    document.getElementById("Demo").style.fontSize='5px';
+  }
   for(let i=0;i<code.length;i+=1)
-  {
+  { 
     let line=document.createElement("p");
     line.innerHTML=code[i];
-
+    if(opt==-1) line.style.fontSize='15px';
     document.getElementById("Demo").appendChild(line);
   }
 }
