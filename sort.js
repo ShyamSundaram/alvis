@@ -19,7 +19,7 @@ async function generateBlocks(n=1) {
   document.getElementById("title").style.display="none";
   document.getElementById("tab").style.display="block";
   document.getElementById("code").style.display="block";
-  document.getElementById("legend").style.display="block";
+  //document.getElementById("legend").style.display="block";
   document.getElementById("psu").style.display="block";
   //document.getElementById("exp").style.display="block";
   // document.getElementById("control").style.display="block";
@@ -405,6 +405,7 @@ async function fwd(){
       document.getElementById("Demo").style.display="block";
       document.getElementById("exp").style.display="block";
       document.getElementById("control").style.display="block";
+      document.getElementById("legend").style.display="block";
       container.style.visibility="visible";
     document.getElementById("exp").style.marginTop='1px';
 }
@@ -767,6 +768,7 @@ async function fwds(){
       document.getElementById("Demo").style.display="block";
       document.getElementById("exp").style.display="block";
       document.getElementById("control").style.display="block";
+      document.getElementById("legend").style.display="block";
       container.style.visibility="visible";
       document.getElementById("exp").style.marginTop="20px";
 }
@@ -1079,6 +1081,7 @@ async function fwdi(){
       document.getElementById("Demo").style.display="block";
       document.getElementById("exp").style.display="block";
       document.getElementById("control").style.display="block";
+      document.getElementById("legend").style.display="block";
       container.style.visibility="visible";
       document.getElementById("exp").style.marginTop="50px";
 }
@@ -1278,6 +1281,7 @@ async function fwdl(){
          document.getElementById("Demo").style.display="block";
          document.getElementById("exp").style.display="block";
          document.getElementById("control").style.display="block";
+         document.getElementById("legend").style.display="block";
       container.style.visibility="visible";
       document.getElementById("exp").style.marginTop="50px";
 }
@@ -1565,6 +1569,7 @@ async function fwdb(){
       document.getElementById("Demo").style.display="block";
       document.getElementById("exp").style.display="block";
       document.getElementById("control").style.display="block";
+      document.getElementById("legend").style.display="block";
       container.style.visibility="visible";
 }
 async function binarySearch(delay=100)
