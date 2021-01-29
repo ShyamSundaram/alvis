@@ -1,0 +1,57 @@
+div.graph-generator-area{
+    float:left;
+    border:1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+div.tree-generator-area{
+    float:left;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+div.tree-container{
+    display: flex;
+    flex-direction: column;
+    min-height:100%;
+}
+
+div.myDiv{
+    display: flex;
+    flex-direction: column;
+    min-height:300px;
+}
+
+input[type=number]{
+    width:7%;
+}
+
+.column1{
+    flex: 55%;
+    padding: 10px;
+    height: 800px;
+}
+.column2{
+    flex: 45%;
+    padding: 10px;
+    height: 800px;
+}
+
+*{
+    box-sizing: border-box;
+}
+  
+.row {
+    display: flex;
+}
+.algo-name {
+    ​​ color: rgb(73, 72, 71);
+
+    font-size: 40px;
+
+    text-align: center;
+
+}
+
+​​

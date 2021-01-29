@@ -1,0 +1,263 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+.header {
+  margin-top: 20px;
+  margin-bottom: 200px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*.data-container {
+  width: 600px;
+  height: 300px;
+  position: relative;
+  margin: 0 200px;
+  float: left;
+}
+
+.data-container1 {
+  width: 600px;
+  height: 300px;
+  position: relative;
+  margin: 0 200px;
+  float: left;
+}*/
+.block {
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #58b7ff;
+  transition: 0.2s all ease;
+}
+.block2 {
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #58b7ff;
+  transition: 0.2s all ease;
+}
+.block__id {
+  position: absolute;
+  top: -24px;
+  width: 100%; 
+  text-align: center;
+}
+.block__id2 {
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  text-align: center;
+}
+.banner{
+  background-color: #7d39a5;
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+}
+
+.navbar{
+  overflow: hidden;
+  margin:auto;
+  text-align: center;
+  background-color: rgb(73, 72, 71);
+  box-shadow: -5px -5px 10px 1px rgb(61, 60, 60) inset;
+}
+
+.navbar a{
+  float: left;
+  color: #dddddd;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 20px;
+  
+}
+
+.navbar :hover{
+  background-color: rgba(139, 83, 139, 0.678);
+  color: rgb(0, 0, 0);
+  transition: transform .10s;
+  transform: scale(1.1);
+}
+
+.navbar a.active{
+  background-color: #937BEB;
+  color:#faf1f1;
+  box-shadow: -5px -5px 10px 1px #6e5dac inset;
+}
+
+#Demo{
+  float: right;
+  margin-right: 300px;
+  margin-top: 0px;
+
+  font-size : 25px;
+}
+
+#exp{
+  font-size : 28px;
+}
+
+
+
+.data-container {
+  width: 38px;
+  height: 38px;
+  position: relative;
+  margin-top: 4050px;
+
+  float: left;
+
+}
+
+.data-container1 {
+  width: 38px;
+  height: 38px;
+  float: left;
+
+  position: relative;
+
+}
+.data-container2 {
+  margin-top: 100px;
+  width: 38px;
+  height: 38px;
+  float: left;
+
+  position: relative;
+
+}
+.block {
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+    margin-top: 0px;
+  background-color: #58b7ff;
+  transition: 0.2s all ease;
+  margin-bottom: 0px;
+}
+
+.block1 {
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0px;
+  background-color: #58b7ff;
+  transition: 0.2s all ease;
+}
+.block4 {
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0px;
+  background-color: #58b7ff;
+  transition: 0.2s all ease;
+}
+.block5 {
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  
+  background-color: #58b7ff;
+  transition: 0.2s all ease;
+}
+.block__id {
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.block__id1 {
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  text-align: center;
+}
+.block__id2 {
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  text-align: center;
+}
+* {
+  font-family: sans-serif;
+}
+
+.header {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.data-container2 {
+  width: 600px;
+  height: 150px;
+  margin-top: 10px;
+  position: relative;
+  margin: 0 200px;
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+.block2 {
+  margin-bottom: 6px;
+  margin-top: 6px;
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #58b7ff;
+  transition: 0.2s all ease;
+}
+.algo-name {
+  ​​color:rgb(73,72,71);
+
+  font-size: 40px;
+
+  text-align: center;
+
+}
+
+.graph_button {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  background-color: #7d39a5;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.graph_button:hover {
+  background-color: #bf98d6;
+}
+
+@media all and (max-width:30em) {
+  .graph_button {
+    display: block;
+    margin: 0.2em auto;
+  }
+}

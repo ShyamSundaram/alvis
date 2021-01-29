@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="index.css"  type="text/css" rel="stylesheet" />
+    <title>Graph Algorithms</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="vis.css">
+        <script src="vis.js"></script>
+        <script src="graph_generator.js" async></script>
+        <script src="tree-generator.js" async></script>
+        <script src="bfs.js" async></script>
+        <script src="dfs.js" async></script>
+        <script src="prims.js" async></script>
+        <script src="kruskal.js" async></script>
+        <script src="input-BFS_DFS.js" async></script>
+        <script src="input-MST.js" async></script>
+
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+        <!--CSS for the loading gif only-->
+        <style>
+            .loading-gif{
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .remove-loading-gif{
+                display: none;
+            }
+
+            #slider .ui-slider-range { 
+            background: #a346f0; 
+            }
+
+            .ui-slider .ui-slider-handle {
+                height: 15px;
+                width: 5px;
+                padding-left: 5px;
+                }
+        </style>
+        
+         
+
+
+
+</head>
+
+<script type="text/javascript">
+    let i=0;
+    let q=0;
+    let index=-1;
+    
+    $(document).ready(function() {
+        var output=$('#output');
+        $("#slider").slider({
+            width: '5px',
+            range: "min",
+            height: '15px',
+            slide: function(event,ui)
+            {
+                output.html(ui.value);
+            }
+        });
+    });
+</script>
+<body>
+    <div class="banner">Algorithmic Visualizer</div>
+    <div class="navbar">
+        <a href="javascript:input_bfs_dfs('bfs')" >Breadth-First Search </a>
+        <a href="javascript:input_bfs_dfs('dfs')">Depth-First Search </a>
+        <a href ="javascript:input_MST('prims')">MST using Prim's</a>
+        <a href="javascript:input_MST('kruskal')" >MST using Kruskal's </a>
+        <a id="lol" href ="javascript:p()">Speed-</a>
+        <!--     <a>Speed  <input id="speed" type="range" min="1" max="100" value="50"></a> -->
+        <div id="slider" style="width: 7%;background-color: white;float: left;margin-left:1%;margin-right:10%;margin-top: 1.3%;"></div>
+        <span id="output" style="background-color: white;display: none"></span>
+
+         <!-- <div id="slider" style="width: 50%;background-color: orange;"></div>
+    Speed: <span id="output" style="background-color: orange;"></span><br><br> -->
+        
+    </div>
+    <div class="algo-name" id="algo-name">Choose an algorithm</div>
+    <img src="loading.gif" alt="loading-gif" class="loading-gif">
+
+    <div class="row">
+        <div class="graph-generator-area column1" id="graph-generator-area">
+            
+        </div>
+        <div class="tree-generator-area column2" id="tree-generator-area" >
+            <div id="tree-container" style="width:90">
+                
+            </div>
+        </div>
+    </div>
+</body>
+    
+    
