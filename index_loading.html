@@ -67,7 +67,7 @@
     Speed: <span id="output" style="background-color: orange;"></span><br><br> -->
 
     
-    <div class="container">
+    <div class="container" id="0">
         <div class="row">
             <div class="header" style="height: 0px;margin-bottom: 50px;float: left"><h1 id="sort-header"></h1></div>
             <h1 style="text-align: center; color: white;" id="title">Choose An Algorithm</h1>
@@ -109,7 +109,7 @@
         <div class="row">
                 <div class="col" id="control" style="display: none;">
                     <img src="pics/blackleft.png" style="height: 20%;width: auto;margin-left: 250px;" onclick="javascript:stepbackward();" />
-                    <img id="c" src="pics/blackplay2.png" style="height: 20%;width: auto;margin-left: 50px;" onclick="(q==0)? document.getElementById('c').src='pics/pause2.png': document.getElementById('c').src='pics/blackplay2.png';q=!q;;javascript:control(q);"/>
+                    <img id="c" src="pics/blackplay2.png" style="height: 20%;width: auto;margin-left: 50px;" onclick="let q=document.getElementsByClassName('container').id;(q=='0')? document.getElementById('c').src='pics/pause2.png': document.getElementById('c').src='pics/blackplay2.png';(q=='0')? document.getElementsByClassName('container').id='1' : document.getElementsByClassName('container').id='0';;javascript:control(document.getElementsByClassName('container').id);"/>
                     <img src="pics/blackright.png" style="height: 20%;width: auto;margin-left: 50px;" onclick="javascript:stepforward();"/>
                 </div>
             
