@@ -1,19 +1,41 @@
 const container = document.querySelector(".data-container");
-  let pseudo=document.getElementById("Demo").children;
+let pseudo=document.getElementById("Demo").children;
 var ele=document.getElementById('exp');
 var hope=document.getElementById('hope');
 var sort=-1; var cus=0;
+var flag=0;
+
+var call=0;
+states=[];
+texts=[];
+pseudos=[];
 function custom(){
   cus=1;
 }
-function control(q){
-  if(q==1){
-    moveforward();
-  }
-  else p();
-}
+
+let index_pls=0;
+let gg=1;
+let standby=1;
+let called=0;
 const sleep=(delay)=>new Promise((resolve)=>setTimeout(resolve,delay))
 async function generateBlocks(n=1) {
+  called+=1;
+  document.getElementById('c').src='pics/blackplay2.png';
+  document.getElementsByClassName('container').id="0";
+  index_pls=0;
+  gg=1;
+  standby=1;
+  document.getElementById("exp").innerHTML="";
+  flag=0;
+
+  call=0;
+  states=[];
+  texts=[];
+  pseudos=[];
+    $(".data-container").empty();
+     $('#Demo').find('p').each(function(){
+        $(this).empty();
+      });
   let num=10;
   document.getElementById("start").style.display="none";
   document.getElementById("title").style.display="none";
@@ -46,6 +68,21 @@ async function generateBlocks(n=1) {
   if(n==0){
     //console.log("g");
     await quickbubbleSort();
+  }
+}
+function control(q){
+
+  if(0){
+    if(q=="0"){
+      moveforward();
+    }
+    else p();
+  }
+  else {
+    if(q=="1"){
+      moveforward();
+    }
+    else p();
   }
 }
 function get_speed()
@@ -165,19 +202,14 @@ async function p() {
 	pause=!pause;
 }
 
-var flag=0;
 
-var call=0;
-states=[];
-texts=[];
-pseudos=[];
 async function appender(arr,txt,p)
-{ pseudos.push(p);
+{ console.log(pseudos,"yeas");
+  pseudos.push(p);
 	states.push(arr);
   texts.push(txt);
 }
-let index_pls=0;
-let gg=1;
+
 async function step_backward(){ //will execute the indexTH state
 
 	
@@ -416,6 +448,9 @@ async function fwd(){
 }
 async function appender_bubbleSort(delay=0) 
 { sort=1;
+ // $("#Demo").empty();
+ /// $("#exp").empty();
+ /// $("#hope").empty();
   generateBlocks();
   openCity("one","bubble");
   container.style.visibility="hidden";
@@ -1764,3 +1799,4 @@ async function quickbubbleSort(delay = 0)
 //selectionSort();
 //bubbleSort();
 //insertionSort();
+
